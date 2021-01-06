@@ -17,18 +17,19 @@
 // You can optional change the response headers at the same time by using $done({body: modifiedBody, headers: modifiedHeaders}); only change the response headers is not allowed for script-response-body. The modifiedHeaders can be copied and modified from $response.headers, please do not change the content length, type and encoding field.
 // Response status can also be optional changed by using $done({body: modifiedBody, headers: modifiedHeaders, status: modifiedStatus}), the modifiedStatus should be like "HTTP/1.1 200 OK"
 
-var map = $request.getParameterMap();
+var url = request.url;
 
 
-var roleId = map[‘roleId’];
+//var roleId = map[‘roleId’];
 
-Var uniqueRoleId = map[‘uniqueRoleId’]
+//Var uniqueRoleId = map[‘uniqueRoleId’]
 
-map[‘roleId’] = roleId;
+//map[‘roleId’] = roleId;
 
-map[‘uniqueRoleId’] = uniqueRoleId;
+//map[‘uniqueRoleId’] = uniqueRoleId;
 
-console.log(roleId);
-console.log(uniqueRoleId);
+//console.log(roleId);
+//console.log(uniqueRoleId);
+console.log(url);
 
-$done(map);
+//$done(map);
