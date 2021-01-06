@@ -18,11 +18,17 @@
 // Response status can also be optional changed by using $done({body: modifiedBody, headers: modifiedHeaders, status: modifiedStatus}), the modifiedStatus should be like "HTTP/1.1 200 OK"
 
 var map = $request.getParameterMap();
-var obj = JSON.parse(body);
 
-obj['result'] = 0;
-body = JSON.stringify(obj);
 
-console.log(body);
+var roleId = map[‘roleId’];
 
-$done(body);
+Var uniqueRoleId = map[‘uniqueRoleId’]
+
+map[‘roleId’] = roleId;
+
+map[‘uniqueRoleId’] = uniqueRoleId;
+
+console.log(roleId);
+console.log(uniqueRoleId);
+
+$done(map);
